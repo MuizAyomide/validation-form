@@ -1,11 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Validation Form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img"><img src="logo.png" alt="" /></div>
+
+      <form>
+        <div class="input-group">
+          <label> Full Name</label>
+          <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()" />
+          <span id="name-error"></span>
+        </div>
+
+        <div class="input-group">
+          <label>Phone No.</label>
+          <input type="tel" placeholder="123 456 7890" id="contact-phone" onkeyup="validatePhone()" />
+          <span id="phone-error"></span>
+        </div>
+
+        <div class="input-group">
+          <label class="email">Email id</label>
+          <input type="email" placeholder="Enter your mail" />
+          <span id="email-error"></span>
+        </div>
+
+        <div class="input-group">
+          <label>Your Message</label>
+          <textarea
+            class="textarea"
+            rows="6"
+            placeholder="Enter your mail"
+          ></textarea>
+          <span id="message-error"></span>
+        </div>
+      </form>
+      <button>Submit</button>
+      <span id="submit-error"></span>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
